@@ -1,0 +1,255 @@
+// @import url('https://fonts-online.ru/fonts/pt-root-ui-vf');
+
+* {
+  box-sizing: border-box;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a:active, /* активная/посещенная ссылка */ 
+a {
+  text-decoration: none;
+  color: inherit;
+  //color: var(--main-color);
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+button{
+  cursor: pointer;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 130px; 
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+body {
+  font-family: "Onest", sans-serif;
+  overflow-x: hidden;
+  color: #2C3336;
+  cursor: default;
+  position: relative;
+  scroll-behavior: smooth;
+  // text-rendering: optimizeSpeed;
+  // background-color: #F7F7F8;
+  background-color: #FFF;
+  line-height: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-optical-sizing: auto;
+}
+  body.no-scroll {
+    overflow: hidden;
+  }
+
+body {
+  background: linear-gradient(180deg, #0e0e0e 0%, #171717 100%);
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 76px;
+  line-height: 111%;
+  color: #FFF;
+}
+
+  h4 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 130%;
+  color: #fff;
+  }
+  
+h3 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 145%;
+  color: #fff;
+}
+
+p {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 145%;
+  color: #adadad;
+}
+
+button {
+  background: transparent;
+  border: none;
+}
+
+.btn {
+  position: relative;
+  border-radius: 31px;
+  padding: 13px 24px 16px;
+  background: transparent;
+
+  font-weight: 500;
+  font-size: 17px;
+  color: #fff;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 31px;
+    padding: 2.5px;
+    background: linear-gradient(127deg, #ff7681 0%, rgba(255, 0, 26, 0) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+  // &:hover {
+  //   color: #fff;
+  // }
+  // &.active {
+  //   color: #fff;
+  //   border: none;
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   inset: 0;
+  //   border-radius: 50px;
+  //   padding: 3px;
+  //   background: linear-gradient(127deg, #ff7681 0%, rgba(255, 0, 26, 0) 100%);
+  //   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  //   -webkit-mask-composite: xor;
+  //   mask-composite: exclude;
+  // }
+  // }
+}
+
+.breadcrumbs {
+  margin: 48px 0 8px;
+  &-container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  &-item {
+    color: #797979;
+    &-link {
+    font-weight: 500;
+    font-size: 16px;
+    color: #797979;
+      span {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  border-radius: 16px;
+  padding: 8px;
+  background: radial-gradient(136.86% 141.25% at 9.76% 8.43%, #222 0%, rgba(62, 62, 62, 0) 100%);
+  &-mobile {
+    display: none;
+  }
+  &-text {
+    line-height: 130%;
+    color: #787878;
+  }
+}
+
+
+
+// @media screen and (max-width:1024px) {
+// }
+
+@media screen and (max-width:768px) {
+  h1 {
+    font-size: 28px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 14px;
+  }
+
+.links {
+  &-mobile {
+    display: block;
+  }
+  &-text {
+    display: none;
+  }
+}
+.breadcrumbs {
+  margin: 40px 0 8px;
+  &-item {
+    &-link {
+    font-size: 14px;
+    }
+  }
+}
+}
