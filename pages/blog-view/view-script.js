@@ -3,13 +3,13 @@ import 'swiper/css/bundle';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-const GallerySlider = document.querySelector('.post-gallery_slider');
+const GallerySlider = document.querySelector('.view-gallery_slider');
 
 if (GallerySlider) {
-    const GalleryItem = GallerySlider.querySelectorAll('.post-gallery_item');
+    const GalleryItem = GallerySlider.querySelectorAll('.view-gallery_item');
 
-    const nextBtn = document.querySelector('.post-gallery_next');
-    const prevBtn = document.querySelector('.post-gallery_prev');
+    const nextBtn = document.querySelector('.view-gallery_next');
+    const prevBtn = document.querySelector('.view-gallery_prev');
 
     if (GalleryItem.length <= 1) {
         GallerySlider.classList.remove('swiper');
@@ -18,14 +18,14 @@ if (GallerySlider) {
         if (nextBtn) nextBtn.style.display = 'none';
         if (prevBtn) prevBtn.style.display = 'none';
     } else {
-new Swiper('.post-gallery_slider', {
+new Swiper('.view-gallery_slider', {
     slidesPerView: 3,
     spaceBetween: 24,
-    loop: true,
+   loop: false,
 
     navigation: {
-        nextEl: '.post-gallery_next',
-        prevEl: '.post-gallery_prev',
+        nextEl: '.view-gallery_next',
+        prevEl: '.view-gallery_prev',
     },
     breakpoints: {
         0: {
@@ -54,7 +54,7 @@ new Swiper('.post-gallery_slider', {
     }
 }
 
-new Swiper('.post-products', {
+new Swiper('.view-products', {
     slidesPerView: 3,
     spaceBetween: 24,
     loop: true,
@@ -83,10 +83,10 @@ new Swiper('.post-products', {
     }
 });
 
-const filterBtn = document.querySelector('.post-head_mobile');
-const filter = document.querySelector('.post-filter');
-const filterClose = document.querySelector('.post-filter_head button');
-const overlay = document.querySelector('.post-filter-overlay');
+const filterBtn = document.querySelector('.view-head_mobile');
+const filter = document.querySelector('.view-filter');
+const filterClose = document.querySelector('.view-filter_head button');
+const overlay = document.querySelector('.view-filter-overlay');
 
 function openFilter() {
   filter.classList.add('active');

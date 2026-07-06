@@ -35,6 +35,7 @@
       display: flex;
       flex-direction: column;
       gap: 24px;
+      transition:  0.3s ease;
       &:hover {
           opacity: 0.93;
           transform: scale(0.99);
@@ -135,6 +136,7 @@
     transition:  0.3s ease;
     &:hover {
       color: #fff;
+      border: 1px solid transparent;
     &::before {
       content: "";
       position: absolute;

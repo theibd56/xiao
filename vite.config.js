@@ -7,7 +7,7 @@ export default defineConfig({
       input: {
         index: resolve(__dirname, "index.html"),
         blog: resolve(__dirname, "pages/blog/blog-page.html"),
-        post: resolve(__dirname, "pages/blog/post-page.html"),
+        view: resolve(__dirname, "pages/blog-view/view-page.html"),
       },
       output: {
         entryFileNames: "assets/[name].js",

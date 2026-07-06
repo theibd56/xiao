@@ -8,4 +8,6 @@ import "./sass/_app.scss";
 
 
 
-Fancybox.bind("[data-fancybox]", {});
+Fancybox.bind("[data-fancybox]", {
+    placeFocusBack: false,
+});

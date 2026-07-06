@@ -149,10 +149,16 @@ button {
   border-radius: 31px;
   padding: 13px 24px 16px;
   background: transparent;
+  overflow: hidden;
 
   font-weight: 500;
   font-size: 17px;
   color: #fff;
+  transition: 0.3s ease;
+  span {
+      position: relative;
+      z-index: 1;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -211,12 +217,22 @@ button {
   border-radius: 16px;
   padding: 8px;
   background: radial-gradient(136.86% 141.25% at 9.76% 8.43%, #222 0%, rgba(62, 62, 62, 0) 100%);
+  transition:  0.3s ease;
   &-mobile {
     display: none;
   }
   &-text {
     line-height: 130%;
     color: #787878;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.f-thumbs.is-modern {
+  .f-thumbs__slide button {
+    width: var(--f-thumb-width) !important;
   }
 }
 

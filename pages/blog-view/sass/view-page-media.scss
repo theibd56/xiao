@@ -1,5 +1,5 @@
 @media screen and (max-width:1450px) {
- .post {
+ .view {
   &-gallery {
     .slider__prev {
       left: -20px;
@@ -9,7 +9,7 @@
 }
 
 @media screen and (max-width:1024px) {
- .post {
+ .view {
   &-wrapper {
     flex-direction: column;
   }
@@ -137,7 +137,7 @@
 }
 
 @media screen and (max-width:768px) {
-  .post {
+  .view {
     gap: 24px;
     padding-bottom: 40px;
     h4 {
