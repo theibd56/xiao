@@ -3,13 +3,13 @@ import 'swiper/css/bundle';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-const GallerySlider = document.querySelector('.view-gallery_slider');
+const GallerySlider = document.querySelector('.blogView-gallery_slider');
 
 if (GallerySlider) {
-    const GalleryItem = GallerySlider.querySelectorAll('.view-gallery_item');
+    const GalleryItem = GallerySlider.querySelectorAll('.blogView-gallery_item');
 
-    const nextBtn = document.querySelector('.view-gallery_next');
-    const prevBtn = document.querySelector('.view-gallery_prev');
+    const nextBtn = document.querySelector('.blogView-gallery_next');
+    const prevBtn = document.querySelector('.blogView-gallery_prev');
 
     if (GalleryItem.length <= 1) {
         GallerySlider.classList.remove('swiper');
@@ -18,14 +18,14 @@ if (GallerySlider) {
         if (nextBtn) nextBtn.style.display = 'none';
         if (prevBtn) prevBtn.style.display = 'none';
     } else {
-new Swiper('.view-gallery_slider', {
+new Swiper('.blogView-gallery_slider', {
     slidesPerView: 3,
     spaceBetween: 24,
    loop: false,
 
     navigation: {
-        nextEl: '.view-gallery_next',
-        prevEl: '.view-gallery_prev',
+        nextEl: '.blogView-gallery_next',
+        prevEl: '.blogView-gallery_prev',
     },
     breakpoints: {
         0: {
@@ -54,7 +54,7 @@ new Swiper('.view-gallery_slider', {
     }
 }
 
-new Swiper('.view-products', {
+new Swiper('.blogView-products', {
     slidesPerView: 3,
     spaceBetween: 24,
     loop: true,
@@ -83,10 +83,10 @@ new Swiper('.view-products', {
     }
 });
 
-const filterBtn = document.querySelector('.view-head_mobile');
-const filter = document.querySelector('.view-filter');
-const filterClose = document.querySelector('.view-filter_head button');
-const overlay = document.querySelector('.view-filter-overlay');
+const filterBtn = document.querySelector('.blogView-head_mobile');
+const filter = document.querySelector('.blogView-filter');
+const filterClose = document.querySelector('.blogView-filter_head button');
+const overlay = document.querySelector('.blogView-filter-overlay');
 
 function openFilter() {
   filter.classList.add('active');
