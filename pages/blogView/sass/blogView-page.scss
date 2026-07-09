@@ -199,8 +199,9 @@
         &_btns {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             h3 {
+                white-space: nowrap;
                 min-width: 122px;
             }
             .btn {
