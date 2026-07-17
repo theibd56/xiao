@@ -20,9 +20,7 @@
     align-items:end;
   }
   &_mobile {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      display: block;
       border: 1px solid #545454;
       border-radius: 16px;
       padding: 7px;
@@ -43,22 +41,17 @@
     }
   }
   &-bottom {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  &-links {
-    &_wrapper {
-      display: none;
-      &__mobile {
+    .blogView-links_wrapper_mobile {
         display: flex;
         align-items: center;
         gap: 10px;
-      }
     }
   }
   &-nav {
     padding: 0;
+  }
+  &-links_wrapper {
+    display: none;
   }
   &-filter {
     position: fixed;
@@ -156,7 +149,7 @@
     }
     }
     &-date {
-        span {
+        time {
         font-size: 14px;
         }
     }
@@ -199,30 +192,27 @@
       font-size: 16px;
       }
       }
-      &_image {
-        width: 208px;
-        height: 208px;
-      }
+      // &_image {
+      //   width: 208px;
+      //   height: 208px;
+      // }
       p {
           font-size: 14px;
       }
       &_btn {
-        display: none;
-      }
-      &_mobile {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        svg {
-          width: 3.4px;
-          height: 18px;
+        &_text {
+          display: none;
+        }
+        &_mobile {
+          display: block;
+            width: 3.4px;
+            height: 18px;
         }
       }
-      &_btns {
-          justify-content: space-between;
-          h3 {
-            font-size: 18px;
-          }
+      &_price {
+        font-size: 18px;
+      }
+      &_bottom {
           .btn {
               padding: 11px 18px;
           }
@@ -290,7 +280,7 @@
         }
     }
     &-label {
-        span {
+        li {
             border-radius: 8px;
             padding: 3.3px 6px;
             font-size: 15px;
@@ -302,6 +292,9 @@
             a {
             font-size: 14px;
             }
+        }
+        ul {
+          gap: 16px;
         }
         p {
             font-size: 14px;

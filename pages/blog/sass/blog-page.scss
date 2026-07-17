@@ -6,6 +6,7 @@
   &-head {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 8px;
     &_mobile {
       display: none;
@@ -67,20 +68,27 @@
       align-items: center;
       justify-content: space-between;
       gap: 8px;
-      span {
-      line-height: 130%;
-      color: #787878;
-      }
     }
     &_date {
       display: flex;
       align-items: center;
       gap: 8px;
+        time {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        color:  #787878;
+        }
     }
-    &_link {
+    &_links {
       display: flex;
       align-items: center;
       gap: 10px;
+      &__wrapper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
     }
   }
 

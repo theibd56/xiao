@@ -105,7 +105,7 @@ body {
   padding: 0 20px;
 }
 
-ul {
+ul, ol {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -195,7 +195,7 @@ button {
   &-container {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 3px;
   }
   &-item {
     color: #797979;
@@ -207,21 +207,22 @@ button {
         cursor: pointer;
       }
     }
+    &:not(:last-child)::after {
+        content: "/";
+        color: #797979;
+    }
   }
 }
 
-.links {
-  display: flex;
-  justify-content: center;
-  align-items:center;
+.shared-link {
   border-radius: 16px;
   padding: 8px;
   background: radial-gradient(136.86% 141.25% at 9.76% 8.43%, #222 0%, rgba(62, 62, 62, 0) 100%);
   transition:  0.3s ease;
-  &-mobile {
+  &_mobile {
     display: none;
   }
-  &-text {
+  &_title {
     line-height: 130%;
     color: #787878;
   }
@@ -252,11 +253,11 @@ button {
     font-size: 14px;
   }
 
-.links {
-  &-mobile {
+.shared-link {
+  &_mobile {
     display: block;
   }
-  &-text {
+  &_title {
     display: none;
   }
 }

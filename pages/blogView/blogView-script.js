@@ -68,7 +68,7 @@ new Swiper('.blogView-products', {
             slidesPerView: 1.2,
             spaceBetween: 8,
         },
-        525: {
+        400: {
             slidesPerView: 2,
         },
         1024: {
