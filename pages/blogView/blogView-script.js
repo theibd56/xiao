@@ -84,8 +84,8 @@ new Swiper('.blogView-products', {
 });
 
 const filterBtn = document.querySelector('.blogView-head_mobile');
-const filter = document.querySelector('.blogView-filter');
-const filterClose = document.querySelector('.blogView-filter_head button');
+const filter = document.querySelector('.blogView-filter__wrapper');
+const filterClose = document.querySelector('.blogView-filter__head button');
 const overlay = document.querySelector('.blogView-filter-overlay');
 
 function openFilter() {
